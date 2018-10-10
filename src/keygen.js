@@ -2,7 +2,7 @@
 
 const assert = require('assert')
 
-const {PrivateKey} = require('eosjs-ecc')
+const {PrivateKey} = require('arisenjs-ecc')
 const validate = require('./validate')
 
 module.exports = {
@@ -162,6 +162,3 @@ function deriveKeys(path, wifsByPath) {
 
   return newKeys
 }
-
-
-

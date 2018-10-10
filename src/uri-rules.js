@@ -26,7 +26,7 @@ function UriRules(rules) {
     @arg {Set<keyPath>|Array<keyPath>} paths - key paths: owner, active,
     active/mypermission, etc..  These paths are created from blockchain
     account.permissions and gathered in the keystore.login function.
-  
+
     @return {{allow: Array<keyPath>, deny: Array<keyPath>}} - paths allowed or
     denied under current Uri.  This tells the keystore, according to the
     Uri rules to generate, save, or remove private keys only for these paths.
@@ -58,7 +58,7 @@ function createUrlRules(uriMatchers) {
   }
   return uriMatchers.map(uriPattern => {
     assert.equal(typeof uriPattern, 'string', uriPattern)
-  
+
     uriPattern = uriPattern.trim()
     assert.notEqual(uriPattern.charAt(0), '^', 'uriPattern')
 

@@ -65,7 +65,7 @@ function Storage(namespace) {
 
     return deNull(state[key])
   }
-  
+
   /**
     @arg {object} state - localStorage, etc
     @arg {Array<string>} keyPrefix - index, if partial path, the rest of the

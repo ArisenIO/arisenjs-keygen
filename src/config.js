@@ -15,7 +15,7 @@ module.exports = {
     if(historyInstance) {
       return historyInstance
     }
-    const createHistory = require('history').createMemoryHistory 
+    const createHistory = require('history').createMemoryHistory
     historyInstance = createHistory()
     return historyInstance
   },
@@ -33,6 +33,5 @@ module.exports = {
     localStorageInstance = require('localStorage')
     return localStorageInstance
   },
-  
-}
 
+}

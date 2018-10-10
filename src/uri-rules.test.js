@@ -66,7 +66,7 @@ describe('Uri Rules', () => {
       allow: ['end-with'],
       deny: [
         'not-end-with',
-        '/end-with', 'end-with/', 'mypath/end-with', 
+        '/end-with', 'end-with/', 'mypath/end-with',
         'end-with?', 'end-with?qp', 'end-with#hp=1'
       ]
     },

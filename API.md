@@ -11,14 +11,14 @@
 
 <dl>
 <dt><a href="#pubkey">pubkey</a> : <code>string</code></dt>
-<dd><p>Public Key (EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV)</p>
+<dd><p>Public Key (RSN6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV)</p>
 </dd>
 <dt><a href="#wif">wif</a> : <code>string</code></dt>
 <dd><p><a href="https://en.bitcoin.it/wiki/Wallet_import_format">Wallet Import Format</a>
   (5JMx76CTUTXxpAbwAqGMMVzSeJaP5UVTT5c2uobcpaMUdLAphSp)</p>
 </dd>
 <dt><a href="#privateKey">privateKey</a> : <code>object</code></dt>
-<dd><p>Private key object from eosjs-ecc.</p>
+<dd><p>Private key object from arisenjs-ecc.</p>
 </dd>
 <dt><a href="#masterPrivateKey">masterPrivateKey</a> : <code>string</code></dt>
 <dd><p>Master Private Key.  Strong random key used to derive all other key types.
@@ -40,7 +40,7 @@
   the signatures should accumulate to meet or exceed the auth&#39;s total threshold.</p>
 </dd>
 <dt><a href="#accountPermissions">accountPermissions</a> : <code>object</code></dt>
-<dd><p>Permissions object from Eos blockchain obtained via get_account.</p>
+<dd><p>Permissions object from Arisen blockchain obtained via get_account.</p>
 <p>  See chain API get_account =&gt; account.permissions.</p>
 </dd>
 <dt><a href="#keyPath">keyPath</a> : <code>string</code></dt>
@@ -190,7 +190,7 @@ Login or derive and save private keys.  This may be called from a login
 | params | <code>object</code> |  |
 | params.parent | [<code>parentPrivateKey</code>](#parentPrivateKey) | Master password (masterPrivateKey),     active, owner, or other permission key. |
 | [params.saveKeyMatches] | [<code>Array.&lt;keyPathMatcher&gt;</code>](#keyPathMatcher) | These private     keys will be saved to disk. (example: `active`). |
-| [params.accountPermissions] | [<code>accountPermissions</code>](#accountPermissions) | Permissions object     from Eos blockchain via get_account.  This is used to validate the parent     and derive additional permission keys.  This allows this keystore to detect     incorrect passwords early before trying to sign a transaction.     See Chain API `get_account => account.permissions`. |
+| [params.accountPermissions] | [<code>accountPermissions</code>](#accountPermissions) | Permissions object     from Arisen blockchain via get_account.  This is used to validate the parent     and derive additional permission keys.  This allows this keystore to detect     incorrect passwords early before trying to sign a transaction.     See Chain API `get_account => account.permissions`. |
 
 <a name="module_Keystore..Keystore..getKeyPaths"></a>
 
@@ -210,7 +210,7 @@ Fetch or derive a public key.
 
 | Param | Type |
 | --- | --- |
-| path | [<code>keyPath</code>](#keyPath) | 
+| path | [<code>keyPath</code>](#keyPath) |
 
 <a name="module_Keystore..Keystore..getPublicKeys"></a>
 
@@ -234,7 +234,7 @@ Fetch or derive a private key.
 
 | Param | Type |
 | --- | --- |
-| path | [<code>keyPath</code>](#keyPath) | 
+| path | [<code>keyPath</code>](#keyPath) |
 
 <a name="module_Keystore..Keystore..getPrivateKeys"></a>
 
@@ -268,7 +268,7 @@ Fetch or derive a key pairs.
 
 | Param | Type | Default |
 | --- | --- | --- |
-| keyPathMatcher | [<code>keyPath</code>](#keyPath) \| [<code>keyPathMatcher</code>](#keyPathMatcher) | <code>**</code> | 
+| keyPathMatcher | [<code>keyPath</code>](#keyPath) \| [<code>keyPathMatcher</code>](#keyPathMatcher) | <code>**</code> |
 
 <a name="module_Keystore..Keystore..signSharedSecret"></a>
 
@@ -277,8 +277,8 @@ Fetch or derive a key pairs.
 
 | Param | Type | Default |
 | --- | --- | --- |
-| otherPubkey | [<code>pubkey</code>](#pubkey) |  | 
-| keyPathMatcher | [<code>keyPathMatcher</code>](#keyPathMatcher) | <code>**</code> | 
+| otherPubkey | [<code>pubkey</code>](#pubkey) |  |
+| keyPathMatcher | [<code>keyPathMatcher</code>](#keyPathMatcher) | <code>**</code> |
 
 <a name="module_Keystore..Keystore..logout"></a>
 
@@ -304,11 +304,11 @@ Keep alive (prevent expiration).  Called automatically if Uri navigation
 <a name="module_Keystore..Keystore..keyProvider"></a>
 
 #### Keystore~keyProvider(param) ⇒ <code>Array.&lt;(pubkey\|wif)&gt;</code>
-Integration for 'eosjs' ..
+Integration for 'arisenjs' ..
 
     Call keyProvider with no parameters or with a specific keyPathMatcher
     pattern to get an array of public keys in this key store.  A library
-    like eosjs may be provided these available public keys to eosd
+    like arisenjs may be provided these available public keys to rsnd
     get_required_keys for filtering and to determine which private keys are
     needed to sign a given transaction.
 
@@ -324,7 +324,7 @@ Integration for 'eosjs' ..
 - <code>path</code> Error `login with your $ key`
 - <code>key</code> Error `missing public key $`
 
-**See**: https://github.com/eosio/eosjs  
+**See**: https://github.com/arisenio/arisenjs  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -383,7 +383,7 @@ masterKeys = {
 <a name="pubkey"></a>
 
 ## pubkey : <code>string</code>
-Public Key (EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV)
+Public Key (RSN6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV)
 
 **Kind**: global typedef  
 <a name="wif"></a>
@@ -396,7 +396,7 @@ Public Key (EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV)
 <a name="privateKey"></a>
 
 ## privateKey : <code>object</code>
-Private key object from eosjs-ecc.
+Private key object from arisenjs-ecc.
 
 **Kind**: global typedef  
 <a name="masterPrivateKey"></a>
@@ -438,7 +438,7 @@ Signing Keys and(or) Accounts each having a weight that when matched in
 required_auth: {
   threshold: 1,
   keys: [{
-      key: 'EOS78Cs5HPKY7HKHrSMnR76uj7yeajPuNwSH1Fsria3sJuufwE3Zd',
+      key: 'RSN78Cs5HPKY7HKHrSMnR76uj7yeajPuNwSH1Fsria3sJuufwE3Zd',
       weight: 1
     }
   ],
@@ -448,7 +448,7 @@ required_auth: {
 <a name="accountPermissions"></a>
 
 ## accountPermissions : <code>object</code>
-Permissions object from Eos blockchain obtained via get_account.
+Permissions object from Arisen blockchain obtained via get_account.
 
   See chain API get_account => account.permissions.
 
@@ -461,7 +461,7 @@ const accountPermissions = [{
   required_auth: {
     threshold: 1,
     keys: [{
-        key: 'EOS78Cs5HPKY7HKHrSMnR76uj7yeajPuNwSH1Fsria3sJuufwE3Zd',
+        key: 'RSN78Cs5HPKY7HKHrSMnR76uj7yeajPuNwSH1Fsria3sJuufwE3Zd',
         weight: 1
       }
     ],
@@ -473,7 +473,7 @@ const accountPermissions = [{
   required_auth: {
     threshold: 1,
     keys: [{
-        key: 'EOS78Cs5HPKY7HKHrSMnR76uj7yeajPuNwSH1Fsria3sJuufwE3Zd',
+        key: 'RSN78Cs5HPKY7HKHrSMnR76uj7yeajPuNwSH1Fsria3sJuufwE3Zd',
         weight: 1
       }
     ],
@@ -485,7 +485,7 @@ const accountPermissions = [{
   required_auth: {
     threshold: 1,
     keys: [{
-        key: 'EOS78Cs5HPKY7HKHrSMnR76uj7yeajPuNwSH1Fsria3sJuufwE3Zd',
+        key: 'RSN78Cs5HPKY7HKHrSMnR76uj7yeajPuNwSH1Fsria3sJuufwE3Zd',
         weight: 1
       }
     ],
@@ -513,9 +513,9 @@ An expanded version of a private key, a keypath ('active/mypermission'),
 
 | Name | Type |
 | --- | --- |
-| wif | [<code>wif</code>](#wif) | 
-| pubkey | [<code>pubkey</code>](#pubkey) | 
-| path | [<code>keyPath</code>](#keyPath) | 
+| wif | [<code>wif</code>](#wif) |
+| pubkey | [<code>pubkey</code>](#pubkey) |
+| path | [<code>keyPath</code>](#keyPath) |
 
 <a name="minimatch"></a>
 
@@ -560,7 +560,7 @@ A valid regular expression string.  The provided string is modified when
 **Example**  
 ```js
 '/(transfer|contracts)', '/bare-uri$'
-  
+
 ```
 **Example**  
 ```js
