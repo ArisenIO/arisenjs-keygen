@@ -32,18 +32,18 @@
   },
   "homepage": "https://github.com/ARISENIO/arisenjs-keygen#readme",
   "devDependencies": {
+    "arisenjs": "~1.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "browserify": "^14.4.0",
     "coveralls": "^3.0.0",
-    "arisenjs": "^4.0.2",
     "istanbul": "^1.1.0-alpha.1",
     "jsdoc-to-markdown": "^3.0.4",
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "arisenjs-ecc": "^4.0.1",
+    "arisenjs-ecc": "~1.0.0",
     "history": "^4.7.2",
     "localStorage": "^1.0.3",
     "minimatch": "^3.0.4"
